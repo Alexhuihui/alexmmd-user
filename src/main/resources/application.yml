@@ -1,0 +1,18 @@
+server:
+  port: 9501
+  servlet:
+    context-path: /user
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
